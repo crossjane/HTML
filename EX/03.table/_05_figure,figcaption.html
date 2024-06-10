@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표에 설명을 붙여주는 figure, figcaption 태그 -figure 태그로 table 태그를 감싸고
+         figcaption태그를 table태그의 자식으로 선언  </title>
+    <style>
+        table, th, td{
+            border : 1px solid lime;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <figure>
+    <table>
+        <figcaption>
+            <!--figcaption 태그도 태그 안에 다른 태그를 선언해서 
+            각각의 스타일을 별도로 지정할 수 있다.-->
+            <b style = "color : red;">Frontend Framework</b>
+            <p>요새 자주 사용되는 SPA Framework</p>
+        </figcaption>
+        <!--colgroup : caption태그 뒤, tr태그 위에 선언 
+                        컬럼들을 묶어주는 역할-->
+            <colgroup>
+                <!--col: colgroup태그 안에서 선언가능한 태그
+                        컬럼마다 스타일을 다르게 줄 수 있는 태그
+                        col 태그의 개수는 최대 테이블에 존재하는 컬럼의 개수
+                        닫는 태그가 없다. 오로지 셀에 관련된 스타일만 적용가능하다 . 폰트 x
+                    -->
+                    <col style = "background-color: yellow;">
+                    <col style ="background-color: aqua;">
+                    <col style ="background-color: goldenrod; width: 1000px">
+            </colgroup>
+            <tr>
+                <th>언어</th>
+                <th>개발회사</th>
+                <th>배포년도</th>
+            </tr>
+            <tr>
+                <td>React</td>
+                <td>메타(구 페이스북)</td>
+                <td>2013</td>
+            </tr>
+                <td>Vue</td>
+                <td>MIT</td>
+                <td>2012</td>
+            <tr></tr>
+        </table> 
+    </figure>
+</body>
+</html>
